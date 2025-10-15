@@ -1,0 +1,13 @@
+s = "lomadam"
+check = s
+check2 = s
+
+for i in range(len(s)):
+    check = check[:-1]
+    check2 = check2[1:]
+
+    if check == check[::-1] or check2 == check2[::-1]:
+        print("Substring of the palindrome found:", check if check == check[::-1] else check2)
+        break
+else:
+    print("No palindrome substring found")
