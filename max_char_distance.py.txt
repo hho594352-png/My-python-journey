@@ -1,0 +1,18 @@
+# Program to check if any substring of a string is a palindrome
+
+def has_palindromic_substring(s):
+    n = len(s)
+    # Loop through all substrings
+    for i in range(n):
+        for j in range(i + 2, n + 1):  # at least 2 chars
+            sub = s[i:j]
+            if sub == sub[::-1]:  # check palindrome
+                print(f"Palindrome substring found: '{sub}'")
+                return True
+    print("No palindromic substring found.")
+    return False
+
+
+# Example
+s = input("Enter a string: ")
+has_palindromic_substring(s)
