@@ -1,0 +1,16 @@
+from collections import Counter
+
+def sum_of_unique(nums):
+    freq = Counter(nums)
+    total = 0
+
+    for num, count in freq.items():
+        if count == 1:
+            total += num
+
+    return total
+
+
+# Example usage
+nums = [4, 5, 7, 5, 4, 8]
+print("Sum of unique elements:", sum_of_unique(nums))
