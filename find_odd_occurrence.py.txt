@@ -1,0 +1,9 @@
+nums = [2, 3, 2, 4, 4, 4, 3]
+dic = {}
+
+for i in nums:
+    dic[i] = dic.get(i, 0) + 1  # count frequency
+
+for num, count in dic.items():
+    if count % 2 != 0:
+        print("Odd count number:", num)

@@ -1,0 +1,7 @@
+def find_missing(l):
+    Min = min(l)
+    Max = max(l)
+
+    for i in range(Min, Max + 1):
+        if i not in l:
+            print("Missing number:", i)
