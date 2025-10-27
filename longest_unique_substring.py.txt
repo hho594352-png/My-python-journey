@@ -1,0 +1,22 @@
+def longest_substring(s):
+    max_length = 0
+    longest_sub = ""
+
+    # Generate all substrings
+    for i in range(len(s)):
+        for j in range(i + 1, len(s) + 1):
+            substring = s[i:j]
+
+            # Check if all characters are unique
+            if len(set(substring)) == len(substring):
+                if len(substring) > max_length:
+                    max_length = len(substring)
+                    longest_sub = substring
+
+    print("Longest substring:", longest_sub)
+    print("Length:", max_length)
+
+
+# Example run
+word = "abcabcbb"
+longest_substring(word)
